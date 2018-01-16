@@ -19,7 +19,7 @@ public class App extends Application {
         super.onCreate();
         netComponent = DaggerNetComponent.builder()
                 .appModule(new AppModule(this))
-                .netModule(new NetModule("http://api.wunderground.com/api/48bc577a58668eeb/conditions/q/GA/Atlanta.json"))
+                .netModule(new NetModule("http://api.wunderground.com/api/48bc577a58668eeb/conditions/q/GA/Atlanta.json/"))
                 .build();
     }
 
