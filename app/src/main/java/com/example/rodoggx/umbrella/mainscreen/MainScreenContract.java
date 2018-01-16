@@ -5,10 +5,10 @@ import com.example.rodoggx.umbrella.data.Weather;
 import java.util.List;
 
 /**
- *
+ * MainScreenContract interface for view and presenter
  */
 
-public class MainScreenContract {
+public interface MainScreenContract {
     interface View {
         void showWeather(List<Weather> weatherList);
         void showError(String message);
@@ -16,6 +16,6 @@ public class MainScreenContract {
     }
 
     interface Presenter {
-        void loadweather();
+        void loadWeather();
     }
 }
