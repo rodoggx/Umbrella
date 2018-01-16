@@ -8,7 +8,7 @@ import com.example.rodoggx.umbrella.data.module.AppModule;
 import com.example.rodoggx.umbrella.data.module.NetModule;
 
 /**
- * Application class to handle the initial instantiation
+ * Application class to handle the app initial instantiation
  */
 
 public class App extends Application {
@@ -19,7 +19,7 @@ public class App extends Application {
         super.onCreate();
         netComponent = DaggerNetComponent.builder()
                 .appModule(new AppModule(this))
-                .netModule(new NetModule("http://jsonplaceholder.typicode.com"))
+                .netModule(new NetModule("http://api.wunderground.com/api/48bc577a58668eeb/conditions/q/GA/Atlanta.json"))
                 .build();
     }
 
